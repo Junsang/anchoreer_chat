@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_06_14_025826) do
+ActiveRecord::Schema.define(version: 2024_06_13_151440) do
 
   create_table "chat_users", force: :cascade do |t|
     t.integer "user_id"
@@ -43,11 +43,6 @@ ActiveRecord::Schema.define(version: 2024_06_14_025826) do
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "email", default: "", null: false
-    t.string "encrypted_password", default: "", null: false
-    t.string "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
   end
 
   add_foreign_key "chat_users", "chats"
