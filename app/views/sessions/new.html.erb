@@ -1,0 +1,5 @@
+<%= form_for (:session) do |f| %>
+  <%= f.label :text, 'Enter your id' %>
+  <%= f.number_field :id, autocomplete: 'off' %>
+  <%= f.submit 'Sign in' %>
+<% end %>

@@ -1,0 +1,24 @@
+<div class="container">
+  <h5> Hi <%= @current_user.name %> </h5>
+  
+  <h4> Chats </h4>
+  <%= render partial: "layouts/new_chat_form" %>
+  <%= turbo_stream_from "chats" %>
+  <div id="chats">
+    <%= render @chats %>
+  </div>
+
+  
+  <div class="col-md-10 bg-dark text-light">
+    <% if @single_chat %>
+
+      <h4 class="text-center"> <%= @single_chat.title %> </h4>
+      <%= turbo_stream_from @single_chat %>
+        <div id="messages">
+          <%= render @messages %>
+        </div>
+      <%= render partial: 'layouts/new_message_form' %>
+
+    <% end %>
+  </div>
+</div>

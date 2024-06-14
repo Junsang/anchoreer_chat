@@ -1,0 +1,7 @@
+{
+  "editor.tabSize": 2,
+  "editor.detectIndentation": true,
+  "workbench.tree.indent": 8,
+  "workbench.editor.tabSizing": "fit",
+  "workbench.sash.size": 4
+}

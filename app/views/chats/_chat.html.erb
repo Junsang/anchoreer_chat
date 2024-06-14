@@ -1,0 +1,6 @@
+  <div> 
+    <%= link_to chat.id, chat %> 
+    [<%= chat.title %>]
+    <% if @last_messages %> <%= @last_messages[chat.id]%> <%end%> 
+    (최근 <% if @recent_users %> <%= @recent_users[chat.id]%> <% end %> 명 접속) 
+  </div>
