@@ -10,3 +10,9 @@
     name: "test-#{i}",
   )
 end
+
+1.upto(5) do |i|
+  Chat.create(
+    title: "chat-#{i}",
+  )
+end

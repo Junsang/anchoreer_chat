@@ -4,5 +4,5 @@ class Chat < ApplicationRecord
   has_many :messages
   has_many :chat_users
 
-  after_create_commit {broadcast_append_to "chats"}
+  after_create_commit { broadcast_append_to "chats" }
 end
